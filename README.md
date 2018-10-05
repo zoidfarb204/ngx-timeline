@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/zoidfarb204/timeline-blog.svg?branch=master)](https://travis-ci.org/zoidfarb204/timeline-blog)
+
 # TimelineBlog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
