@@ -66,8 +66,8 @@ export class AppComponent implements OnInit {
 
   getWidth(item, width) {
       var useableWidth = width - 100;
-      var distance = Math.floor(useableWidth / this.config.length)
-      return 50 + item * distance;
+      var distance = Math.floor(useableWidth / (this.config.length - 1))
+      return 50 + (item * distance);
     }
 
     getColor(index){
@@ -77,11 +77,4 @@ export class AppComponent implements OnInit {
         return "lightgray"
       }
     }
-
-  getClass() {
-      var columnSize = Math.floor(12 / this.selectedPage.columns);
-      console.log(columnSize);
-      return "col-md-" + columnSize;
-    }
-
   }

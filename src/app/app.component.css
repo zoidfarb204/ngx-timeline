@@ -17,3 +17,6 @@ h3 {
   font-size: 32px
 }
 
+.timeline-container{
+  padding: 0px !important;
+}
