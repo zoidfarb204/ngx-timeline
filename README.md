@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/zoidfarb204/timeline-blog.svg?branch=master)](https://travis-ci.org/zoidfarb204/timeline-blog)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # TimelineBlog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
