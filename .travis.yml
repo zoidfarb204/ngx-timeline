@@ -10,7 +10,17 @@ before_script:
   - npm install -g @angular/cli
 
 script:
-  - ng build --prod
+  - ng lint
+  - ng test --watch=false --progress=false --browsers=ChromeHeadlessCI
+  - ng build --prod --base-href https://zoidfarb204.github.io/timeline-blog/
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/travis-demo
+  on:
+    branch: master
 
 notifications:
   email:

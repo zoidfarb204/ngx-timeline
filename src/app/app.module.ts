@@ -7,11 +7,11 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   imports: [
-    BrowserModule, 
-    FormsModule, 
+    BrowserModule,
+    FormsModule,
     CarouselModule.forRoot()
   ],
-  declarations: [ AppComponent],
+  declarations: [AppComponent],
   bootstrap: [
     AppComponent
   ]

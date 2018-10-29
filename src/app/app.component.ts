@@ -214,7 +214,7 @@ export class AppComponent implements OnInit {
     },
     ]
   },
-    {
+  {
     title: "Page 22",
     subTitle: "Subtitle page 3",
     components: [{
@@ -224,7 +224,7 @@ export class AppComponent implements OnInit {
     },
     ]
   },
-     {
+  {
     title: "Page 23",
     subTitle: "Subtitle page 3",
     components: [{
@@ -259,32 +259,32 @@ export class AppComponent implements OnInit {
       this.paging = true;
       var pos = 50 + (item * 50);
       var perpage = this.perPage(width);
-      if(item < (perpage * (this.page -1 )) - 1){
+      if (item < (perpage * (this.page - 1)) - 1) {
         return -100;
-      } 
-      if( item  > (perpage * (this.page))-1){
+      }
+      if (item > (perpage * (this.page)) - 1) {
         return (width + 100);
       }
-      return 50 + ((item - ((this.page - 1) * (perpage - 1))) * 50 );
+      return 50 + ((item - ((this.page - 1) * (perpage - 1))) * 50);
     }
   }
 
-  getDistance(width){
+  getDistance(width) {
     var useableWidth = this.getUsableWidth(width);
     return Math.floor(useableWidth / (this.config.length - 1));
   }
 
-  getUsableWidth(width){
+  getUsableWidth(width) {
     return width - 100;
   }
 
-  maxPage(width){
+  maxPage(width) {
     var useableWidth = this.getUsableWidth(width);
     var distance = 50;
-    return Math.ceil((distance * this.config.length)/useableWidth);
+    return Math.ceil((distance * this.config.length) / useableWidth);
   }
 
-  perPage(width){
+  perPage(width) {
     var useableWidth = this.getUsableWidth(width);
     var distance = 50;
     return Math.ceil(useableWidth / distance);
@@ -298,7 +298,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  changePage(am){
+  changePage(am) {
     this.page = this.page + am;
   }
 }
