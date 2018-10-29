@@ -1,8 +1,8 @@
 import {ImageModel} from './image.model';
 import {ComponentModel} from './component.model';
 
-export class PageModel{
+export class PageModel {
   title: String;
-  subTitle: String; 
+  subTitle: String;
   components: ComponentModel[];
 }

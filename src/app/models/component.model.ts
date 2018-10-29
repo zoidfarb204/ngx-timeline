@@ -1,8 +1,8 @@
-import {ImageModel} from './image.model'
+import {ImageModel} from './image.model';
 
 
-export class ComponentModel{
-  componentType: String
+export class ComponentModel {
+  componentType: String;
   content?: String;
   images?: ImageModel[];
 }

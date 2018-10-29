@@ -10,7 +10,17 @@ before_script:
   - npm install -g @angular/cli
 
 script:
+  - ng lint
+  - ng test --watch=false --progress=false --browsers=ChromeHeadlessCI
   - ng build --prod
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/timeline-blog
+  on:
+    branch: master
 
 notifications:
   email:
