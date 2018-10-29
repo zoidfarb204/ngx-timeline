@@ -4,7 +4,7 @@ import { PageModel } from './models/page.model';
 
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -12,229 +12,229 @@ export class AppComponent implements OnInit {
   name = 'Angular';
   selectedPage: any;
   selectedIndex: number;
-  paging: boolean = false;
+  paging = false;
   page = 1;
   config: PageModel[] = [{
-    title: "Item 1",
-    subTitle: "Item 1",
+    title: 'Item 1',
+    subTitle: 'Item 1',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
     },
     {
-      componentType: "image",
+      componentType: 'image',
       images: [{
-        path: "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?cs=srgb&dl=beauty-bloom-blue-67636.jpg&fm=jpg",
-        caption: "Flower"
+        path: 'https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?cs=srgb&dl=beauty-bloom-blue-67636.jpg&fm=jpg',
+        caption: 'Flower'
       },
       {
-        path: "https://images.pexels.com/photos/10462/pexels-photo-10462.jpeg?cs=srgb&dl=bloom-flora-floral-10462.jpg&fm=jpg",
-        subCaption: "This is a cool Flower"
+        path: 'https://images.pexels.com/photos/10462/pexels-photo-10462.jpeg?cs=srgb&dl=bloom-flora-floral-10462.jpg&fm=jpg',
+        subCaption: 'This is a cool Flower'
       }
       ]
     }]
   },
   {
-    title: "Page 2",
-    subTitle: "Subtitle page 2",
+    title: 'Page 2',
+    subTitle: 'Subtitle page 2',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
     }]
   },
   {
-    title: "Page 3",
-    subTitle: "Subtitle page 3",
+    title: 'Page 3',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 4",
-    subTitle: "Subtitle page 3",
+    title: 'Page 4',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 5",
-    subTitle: "Subtitle page 3",
+    title: 'Page 5',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 6",
-    subTitle: "Subtitle page 3",
+    title: 'Page 6',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 7",
-    subTitle: "Subtitle page 3",
+    title: 'Page 7',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 8",
-    subTitle: "Subtitle page 3",
+    title: 'Page 8',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 9",
-    subTitle: "Subtitle page 3",
+    title: 'Page 9',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 10",
-    subTitle: "Subtitle page 3",
+    title: 'Page 10',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 11",
-    subTitle: "Subtitle page 3",
+    title: 'Page 11',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 12",
-    subTitle: "Subtitle page 3",
+    title: 'Page 12',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 13",
-    subTitle: "Subtitle page 3",
+    title: 'Page 13',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 14",
-    subTitle: "Subtitle page 3",
+    title: 'Page 14',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 15",
-    subTitle: "Subtitle page 3",
+    title: 'Page 15',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 16",
-    subTitle: "Subtitle page 3",
+    title: 'Page 16',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 17",
-    subTitle: "Subtitle page 3",
+    title: 'Page 17',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 18",
-    subTitle: "Subtitle page 3",
+    title: 'Page 18',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 19",
-    subTitle: "Subtitle page 3",
+    title: 'Page 19',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 20",
-    subTitle: "Subtitle page 3",
+    title: 'Page 20',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }, {
-    title: "Page 21",
-    subTitle: "Subtitle page 3",
+    title: 'Page 21',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   },
   {
-    title: "Page 22",
-    subTitle: "Subtitle page 3",
+    title: 'Page 22',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   },
   {
-    title: "Page 23",
-    subTitle: "Subtitle page 3",
+    title: 'Page 23',
+    subTitle: 'Subtitle page 3',
     components: [{
-      componentType: "text",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex."
+      componentType: 'text',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus magna, venenatis ut luctus ac, ultricies eu nulla. Integer in nulla viverra libero cursus dictum. Aliquam sodales ornare justo, vitae egestas lorem malesuada vel. Donec tincidunt nibh vel mollis pharetra. Etiam sed mollis urna. Suspendisse luctus sed arcu nec dapibus. Nulla bibendum venenatis eros a vestibulum. In pellentesque dolor nec est tincidunt lacinia. Cras quis vestibulum tortor. Phasellus in sollicitudin turpis. Nullam eget purus risus. Morbi luctus nisi at posuere pulvinar. Praesent ultrices neque sed sem venenatis, at blandit mauris aliquam. Morbi efficitur ipsum consequat congue laoreet. Praesent nec est gravida, efficitur magna maximus, congue ex.'
 
     },
     ]
   }
-  ]
+  ];
 
 
 
@@ -252,13 +252,13 @@ export class AppComponent implements OnInit {
   }
 
   getWidth(item, width) {
-    var distance = this.getDistance(width)
+    const distance = this.getDistance(width);
     if (distance >= 50) {
       return 50 + (item * distance);
     } else {
       this.paging = true;
-      var pos = 50 + (item * 50);
-      var perpage = this.perPage(width);
+      const pos = 50 + (item * 50);
+      const perpage = this.perPage(width);
       if (item < (perpage * (this.page - 1)) - 1) {
         return -100;
       }
@@ -270,7 +270,7 @@ export class AppComponent implements OnInit {
   }
 
   getDistance(width) {
-    var useableWidth = this.getUsableWidth(width);
+    const useableWidth = this.getUsableWidth(width);
     return Math.floor(useableWidth / (this.config.length - 1));
   }
 
@@ -279,22 +279,22 @@ export class AppComponent implements OnInit {
   }
 
   maxPage(width) {
-    var useableWidth = this.getUsableWidth(width);
-    var distance = 50;
+    const useableWidth = this.getUsableWidth(width);
+    const distance = 50;
     return Math.ceil((distance * this.config.length) / useableWidth);
   }
 
   perPage(width) {
-    var useableWidth = this.getUsableWidth(width);
-    var distance = 50;
+    const useableWidth = this.getUsableWidth(width);
+    const distance = 50;
     return Math.ceil(useableWidth / distance);
   }
 
   getColor(index) {
     if (index <= this.selectedIndex) {
-      return "lightblue"
+      return 'lightblue';
     } else {
-      return "lightgray"
+      return 'lightgray';
     }
   }
 
