@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { TimelineModule } from './modules/timeline/timeline.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    CarouselModule.forRoot()
+    TimelineModule
   ],
   declarations: [AppComponent],
   bootstrap: [
