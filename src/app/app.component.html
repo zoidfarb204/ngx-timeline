@@ -1,11 +1,11 @@
 <div class="row">
 	<div class="col-md-12 timeline-container" #timeline>
 		<svg width="timeline.offsetWidth" height="100">
-			<line x1="0" y1="50" [attr.x2]="timeline.offsetWidth" y2="50" stroke-width="5" stroke="lightgray" />
-			<line x1="0" y1="50" y2="50" [attr.x2]="getWidth(selectedIndex,timeline.offsetWidth)" stroke="lightblue"
+			<line x1="0" y1="50" [attr.x2]="timeline.offsetWidth" y2="50" stroke-width="5" [attr.stroke]="settings.inactiveColor" />
+			<line x1="0" y1="50" y2="50" [attr.x2]="getWidth(selectedIndex,timeline.offsetWidth)" [attr.stroke]="settings.activeColor"
 			 stroke-width="5" />
 
-			<g *ngIf="paging" stroke="lightgray" stroke-width="5">
+			<g *ngIf="paging" [attr.stroke]="settings.inactiveColor" stroke-width="5">
 				<line *ngIf="page > 1" x1="0" y1="50" x2="17" y2="50" class="clickable-item" transform="rotate(45  0 50)" (click)="changePage(-1)" />
 				<line *ngIf="page > 1" x1="0" y1="50" x2="17" y2="50" class="clickable-item" transform="rotate(-45  0 50)" (click)="changePage(-1)" />
 				<line *ngIf="page < maxPage(timeline.offsetWidth)" [attr.x1]="timeline.offsetWidth" y1="50" [attr.x2]="timeline.offsetWidth - 17"

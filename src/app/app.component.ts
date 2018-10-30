@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, HostBinding, ElementRef } from '@angular/core';
 import { PageModel } from './models/page.model';
+import { TimelineSettingsModel } from './models/timeline-settings.model';
 
 
 
@@ -14,6 +15,8 @@ export class AppComponent implements OnInit {
   selectedIndex: number;
   paging = false;
   page = 1;
+  settings: TimelineSettingsModel = {inactiveColor: '#aaaeb5', activeColor: '#0e326d'};
+
   config: PageModel[] = [{
     title: 'Item 1',
     subTitle: 'Item 1',
@@ -292,9 +295,9 @@ export class AppComponent implements OnInit {
 
   getColor(index) {
     if (index <= this.selectedIndex) {
-      return 'lightblue';
+      return this.settings.activeColor;
     } else {
-      return 'lightgray';
+      return this.settings.inactiveColor;
     }
   }
 
