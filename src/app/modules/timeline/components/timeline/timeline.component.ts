@@ -12,7 +12,7 @@ export class TimelineComponent implements OnInit {
   selectedIndex: number;
   paging = false;
   page = 1;
-  settings: TimelineSettingsModel = { inactiveColor: '#aaaeb5', activeColor: '#0e326d' };
+  @Input() settings: TimelineSettingsModel = { inactiveColor: '#aaaeb5', activeColor: '#0e326d' };
   @Input() data: PageModel[];
 
   constructor() { }
