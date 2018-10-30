@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { TimelineModule } from './modules/timeline/timeline.module';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -8,6 +9,7 @@ describe('AppComponent', () => {
         AppComponent,
       ],
       imports: [
+        TimelineModule,
         CarouselModule.forRoot()
       ]
     }).compileComponents();
@@ -17,9 +19,4 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it('usable width should be 100 less than width'), async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.getUsableWidth(800)).toEqual(700);
-  });
 });
