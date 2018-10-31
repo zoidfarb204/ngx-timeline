@@ -1,6 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { TimelineModule } from './modules/timeline/timeline.module';
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -10,7 +9,6 @@ describe('AppComponent', () => {
       ],
       imports: [
         TimelineModule,
-        CarouselModule.forRoot()
       ]
     }).compileComponents();
   }));
