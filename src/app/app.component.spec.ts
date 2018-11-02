@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { TimelineModule } from './modules/timeline/timeline.module';
+import { NgxTimeLineModule } from 'projects/ngx-time-line/src/lib/ngx-time-line.module';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -8,7 +9,7 @@ describe('AppComponent', () => {
         AppComponent,
       ],
       imports: [
-        TimelineModule,
+        NgxTimeLineModule,
       ]
     }).compileComponents();
   }));

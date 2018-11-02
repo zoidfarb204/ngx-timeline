@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, HostListener, HostBinding, ElementRef } from '@angular/core';
-import { TimelineSettingsModel } from '../../models/timeline-settings.model';
 import { PageModel } from 'src/app/models/page.model';
+import { TimelineSettingsModel } from '../../models/timeline-settings.model';
 
 @Component({
-  selector: 'app-timeline',
+  selector: 'timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.css']
 })
