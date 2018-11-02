@@ -116,6 +116,41 @@
           }
         }
       }
+    },
+    "ngx-time-line": {
+      "root": "projects/ngx-time-line",
+      "sourceRoot": "projects/ngx-time-line/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-time-line/tsconfig.lib.json",
+            "project": "projects/ngx-time-line/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-time-line/src/test.ts",
+            "tsConfig": "projects/ngx-time-line/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-time-line/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-time-line/tsconfig.lib.json",
+              "projects/ngx-time-line/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "timeline-blog"

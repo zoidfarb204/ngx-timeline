@@ -11,7 +11,8 @@ before_script:
 
 script:
   - ng lint
-  - ng test --watch=false --progress=false --browsers=ChromeHeadlessCI
+  - ng test timeline-blog --watch=false --progress=false --browsers=ChromeHeadlessCI
+  - ng test ngx-time-line --watch=false --progress=false --browsers=ChromeHeadlessCI  
   - ng build --prod
 
 deploy:
