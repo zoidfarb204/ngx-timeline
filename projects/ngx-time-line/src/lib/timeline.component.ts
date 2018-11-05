@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, HostListener, HostBinding, ElementRef } from '@angular/core';
-import { PageModel } from 'src/app/models/page.model';
-import { TimelineSettingsModel } from '../../models/timeline-settings.model';
+import { TimelineSettingsModel } from './timeline-settings.model';
 
 @Component({
   selector: 'timeline',
@@ -16,13 +15,14 @@ export class TimelineComponent implements OnInit {
     inactiveColor: '#aaaeb5',
     activeColor: '#0e326d',
     labelColor: '#aaaeb5',
-    showLabel: true };
-  @Input() data: PageModel[];
+    showLabel: true,
+    data: [{title: 'Page 1'}, { title: 'Page 2'}, {title: 'Page 3'}]
+  };
 
   constructor() { }
 
   ngOnInit() {
-    this.selectedPage = this.data[0];
+    this.selectedPage = this.settings.data[0];
     this.selectedIndex = 0;
   }
 
@@ -52,7 +52,7 @@ export class TimelineComponent implements OnInit {
 
   getDistance(width) {
     const useableWidth = this.getUsableWidth(width);
-    return Math.floor(useableWidth / (this.data.length - 1));
+    return Math.floor(useableWidth / (this.settings.data.length - 1));
   }
 
   getUsableWidth(width) {
@@ -62,7 +62,7 @@ export class TimelineComponent implements OnInit {
   maxPage(width) {
     const useableWidth = this.getUsableWidth(width);
     const distance = 50;
-    return Math.ceil((distance * this.data.length) / useableWidth);
+    return Math.ceil((distance * this.settings.data.length) / useableWidth);
   }
 
   perPage(width) {
@@ -84,6 +84,6 @@ export class TimelineComponent implements OnInit {
   }
 
   getTitle(index) {
-    return this.data[index].title;
+    return this.settings.data[index].title;
   }
 }

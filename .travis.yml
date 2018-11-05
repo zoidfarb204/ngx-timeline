@@ -14,6 +14,7 @@ script:
   - ng test timeline-blog --watch=false --progress=false --browsers=ChromeHeadlessCI
   - ng test ngx-time-line --watch=false --progress=false --browsers=ChromeHeadlessCI  
   - ng build --prod
+  - ng build ngx-time-line
 
 deploy:
   provider: pages
