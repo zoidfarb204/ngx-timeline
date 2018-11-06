@@ -17,6 +17,18 @@ describe('TimelineComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TimelineComponent);
     component = fixture.componentInstance;
+    component.settings = {
+      inactiveColor: 'lightgray',
+      activeColor: 'darkblue',
+      showLabel: true,
+      labelColor: 'blue',
+      data: [
+        { title: 'Page 1' },
+        { title: 'Page 2' },
+        { title: 'Page 3' },
+        { title: 'Page 4' }
+      ]
+    };
     fixture.detectChanges();
   });
 

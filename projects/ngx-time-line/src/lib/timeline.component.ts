@@ -11,13 +11,7 @@ export class TimelineComponent implements OnInit {
   selectedIndex: number;
   paging = false;
   page = 1;
-  @Input() settings: TimelineSettingsModel = {
-    inactiveColor: '#aaaeb5',
-    activeColor: '#0e326d',
-    labelColor: '#aaaeb5',
-    showLabel: true,
-    data: [{title: 'Page 1'}, { title: 'Page 2'}, {title: 'Page 3'}]
-  };
+  @Input() settings: TimelineSettingsModel = new TimelineSettingsModel();
 
   constructor() { }
 
