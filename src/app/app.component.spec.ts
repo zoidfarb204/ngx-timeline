@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { NgxTimeLineModule } from 'projects/ngx-time-line/src/lib/ngx-time-line.module';
+import { NgxTimeLineModule } from 'projects/ngx-time-line-component/src/public_api';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

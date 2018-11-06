@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngx-time-line",
+  "dest": "../../dist/ngx-time-line-component",
   "lib": {
     "entryFile": "src/public_api.ts"
   }

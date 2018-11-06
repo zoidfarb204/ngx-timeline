@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TimelineSettingsModel } from 'projects/ngx-time-line/src/public_api';
+import { TimelineSettingsModel } from 'projects/ngx-time-line-component/src/public_api';
+
 
 
 
