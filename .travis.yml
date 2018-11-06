@@ -14,7 +14,7 @@ script:
   - ng test timeline-blog --watch=false --progress=false --browsers=ChromeHeadlessCI
   - ng test ngx-time-line --watch=false --progress=false --browsers=ChromeHeadlessCI  
   - ng build --prod
-  - ng build ngx-time-line
+  - ng build ngx-time-line-component
 
 deploy:
   provider: pages
@@ -28,7 +28,7 @@ deploy:
   provider: npm
   email: "laxin204@gmail.com"
   api_key: $NPM_TOKEN
-  local_dir: dist/ngx-time-line
+  local_dir: dist/ngx-time-line-component
   on:
     branch: master
 
