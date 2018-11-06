@@ -24,6 +24,14 @@ deploy:
   on:
     branch: master
 
+deploy:
+  provider: npm
+  email: "laxin204@gmail.com"
+  api_key: $NPM_TOKEN
+  local_dir: dist/ngx-time-line
+  on:
+    branch: master
+
 notifications:
   email:
     on_failure: change
