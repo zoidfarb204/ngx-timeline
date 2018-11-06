@@ -12,7 +12,7 @@ before_script:
 script:
   - ng lint
   - ng test timeline-blog --watch=false --progress=false --browsers=ChromeHeadlessCI
-  - ng test ngx-time-line --watch=false --progress=false --browsers=ChromeHeadlessCI  
+  - ng test ngx-time-line-component --watch=false --progress=false --browsers=ChromeHeadlessCI  
   - ng build --prod
   - ng build ngx-time-line-component
 
