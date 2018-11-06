@@ -117,33 +117,33 @@
         }
       }
     },
-    "ngx-time-line": {
-      "root": "projects/ngx-time-line",
-      "sourceRoot": "projects/ngx-time-line/src",
+    "ngx-time-line-component": {
+      "root": "projects/ngx-time-line-component",
+      "sourceRoot": "projects/ngx-time-line-component/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ngx-time-line/tsconfig.lib.json",
-            "project": "projects/ngx-time-line/ng-package.json"
+            "tsConfig": "projects/ngx-time-line-component/tsconfig.lib.json",
+            "project": "projects/ngx-time-line-component/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-time-line/src/test.ts",
-            "tsConfig": "projects/ngx-time-line/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-time-line/karma.conf.js"
+            "main": "projects/ngx-time-line-component/src/test.ts",
+            "tsConfig": "projects/ngx-time-line-component/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-time-line-component/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-time-line/tsconfig.lib.json",
-              "projects/ngx-time-line/tsconfig.spec.json"
+              "projects/ngx-time-line-component/tsconfig.lib.json",
+              "projects/ngx-time-line-component/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
