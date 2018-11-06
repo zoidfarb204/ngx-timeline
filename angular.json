@@ -119,7 +119,7 @@
     },
     "ngx-time-line-component": {
       "root": "projects/ngx-time-line-component",
-      "sourceRoot": "projects/ngx-time-line/src",
+      "sourceRoot": "projects/ngx-time-line-component/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
@@ -135,7 +135,7 @@
           "options": {
             "main": "projects/ngx-time-line-component/src/test.ts",
             "tsConfig": "projects/ngx-time-line-component/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-time-line/karma.conf.js"
+            "karmaConfig": "projects/ngx-time-line-component/karma.conf.js"
           }
         },
         "lint": {
