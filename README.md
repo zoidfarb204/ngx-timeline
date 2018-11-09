@@ -1,29 +1,37 @@
-[![Build Status](https://travis-ci.org/zoidfarb204/timeline-blog.svg?branch=master)](https://travis-ci.org/zoidfarb204/timeline-blog)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-# TimelineBlog
+# Install
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+    npm install ngx-time-line-component
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Basic usage
 
-## Code scaffolding
+import NgxTimeLineModule in your module
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    ...
+    import  {  NgxTimeLineModule}  from  'ngx-time-line-component';
+    @NgModule({
+    imports:  [  
+	    ...,
+		NgxTimeLineModule
+	],
+	...
+	});
 
-## Build
+component.html
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    <timeline [settings]="settings"></timeline>
 
-## Running unit tests
+component.ts
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    settings = {
+	    inactiveColor: 'lightgray',
+	    activeColor: 'darkblue',
+	    showLabel: true,
+	    labelColor: 'blue',
+	    data: [
+		    { title: 'Page 1' },
+		    { title: 'Page 2' },
+			{ title: 'Page 3' },
+			{ title: 'Page 4' }
+		]
+	};
